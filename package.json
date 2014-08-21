@@ -1,0 +1,27 @@
+{
+  "name": "stimpy",
+  "version": "0.0.0",
+  "description": "A sick little monkey for starting and deploying hapi.js apps.",
+  "main": "stimpy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semateos/stimpy.git"
+  },
+  "keywords": [
+    "hapi",
+    "deploy",
+    "heroku"
+  ],
+  "author": "Sam Mateosian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/semateos/stimpy/issues"
+  },
+  "homepage": "https://github.com/semateos/stimpy",
+  "dependencies": {
+    "cli": "^0.6.3"
+  }
+}
