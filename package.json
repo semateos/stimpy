@@ -1,8 +1,9 @@
 {
   "name": "stimpy",
   "version": "0.0.0",
-  "description": "A sick little monkey for starting and deploying hapi.js apps.",
-  "main": "stimpy",
+  "description": "A sick little monkey for deploying hapi.js apps.",
+  "main": "stimpy.js",
+  "bin": "stimpy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
