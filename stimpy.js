@@ -53,7 +53,16 @@ cli.deploy = function(type, branch){
  				'heroku open'
  			];
 
-     		if(exec('git remote').output.indexOf('heroku')){
+ 			var remotes = exec('git remote').output;
+
+ 			this.debug(remotes);
+
+ 			var has_heroku = remotes.indexOf('heroku');
+
+ 			this.debug(has_heroku);
+
+ 			//if heroku app has already been created:
+     		if(has_heroku >= 0){
 
      			script = [
 	 				'git push heroku master',
