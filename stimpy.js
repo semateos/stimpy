@@ -30,13 +30,27 @@ cli.create = function(type, location){
 		console.log('I am creating for you now: ' + type + ' at: ' + location);
 	}	
 
-	//make a clone of the boilerplate at the desired location	
-	var command = 'git clone ' + config.repo + '/stimpy-' + type + '.git ' + location;
+	var outcome = exec('git clone ' + config.repo + '/stimpy-' + type + '.git ' + location);
 
-	if (exec(command).code !== 0) {
-	  this.error('Error: Git push failed, you eediot!');
+	this.debug(outcome);
+
+	if (outcome.code !== 0) {
+	  this.error(outcome.output);
 	  exit(1);
 	}
+
+	cd(location);
+
+	var outcome = exec('npm install');
+
+	this.debug(outcome);
+
+	if (outcome.code !== 0) {
+	  this.error(outcome.output);
+	  exit(1);
+	}
+
+	cd('..');
 	
 }
 

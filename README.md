@@ -4,14 +4,18 @@ A simple yet inventive fellow for deploying hapi things.
 
 To install:
 ```bash
-$ npm install -g git://github.com/semateos/stimpy.git
+$ npm install -g git://github.com/semateos/stimpy.git supervisor bower gulp
 ```
 (You might need to sudo that depending on your system)
 
 To create a starter app:
 ```bash
 $ stimpy create medium my-new-app
+$ cd my-new-app
+$ npm start
 ```
+
+This installs and runs a copy of [stimpy-medium](https://github.com/semateos/stimpy-medium).
 
 To test deploy:
 ```bash
