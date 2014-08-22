@@ -15,7 +15,10 @@ $ cd my-new-app
 $ npm start
 ```
 
-This installs and runs a copy of [stimpy-medium](https://github.com/semateos/stimpy-medium).
+This installs and runs a copy of [stimpy-medium](https://github.com/semateos/stimpy-medium).  You might want to try the lite edition for even less stuff:
+```bash
+$ stimpy create lite my-new-app
+```
 
 To test deploy:
 ```bash
