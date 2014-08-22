@@ -15,10 +15,7 @@ $ cd my-new-app
 $ npm start
 ```
 
-This installs and runs a copy of [stimpy-medium](https://github.com/semateos/stimpy-medium).  You might want to try the [lite edition](https://github.com/semateos/stimpy-lite) for even less:
-```bash
-$ stimpy create lite my-new-app
-```
+This installs and runs a copy of [stimpy-medium](https://github.com/semateos/stimpy-medium). 
 
 To test deploy:
 ```bash
@@ -27,9 +24,20 @@ $ stimpy deploy heroku
 
 This assumes you have [node](http://nodejs.org/), a [heroku login](https://signup.heroku.com/dc) and the [heroku toolbelt](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
 
-You'll want to repoint the git origin to something else eventually:
+After you make changes, you'll have to commit them to master before deploying:
+```bash
+$ git commit -am"made some awesome changes"
+$ stimpy deploy heroku
+```
+
+You'll probably want to repoint the git origin to something else eventually:
 ```bash
 $ git remote set-url origin git@github.com:semateos/my-app.git
+```
+
+You might want to try the [lite edition](https://github.com/semateos/stimpy-lite) for even less:
+```bash
+$ stimpy create lite my-new-app
 ```
 
 ## Contributers
