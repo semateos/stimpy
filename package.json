@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/semateos/stimpy",
   "dependencies": {
-    "cli": "^0.6.3"
+    "cli": "^0.6.3",
+    "exec-sync": "^0.1.6",
+    "shelljs": "^0.3.0",
+    "underscore-node": "^0.1.2"
   }
 }
