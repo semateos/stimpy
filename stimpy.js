@@ -22,19 +22,19 @@ cli.create = function(type, location){
 	if(!location){
 
 		location = '';
-		console.log('Creating: ' + type);
+		console.log('I am creating for you now: ' + type);
 
 	}else{
 
 		mkdir('', location);
-		console.log('Creating: ' + type + ' at ' + location);
+		console.log('I am creating for you now: ' + type + ' at: ' + location);
 	}	
 
 	//make a clone of the boilerplate at the desired location	
 	var command = 'git clone ' + config.repo + '/stimpy-' + type + '.git ' + location;
 
 	if (exec(command).code !== 0) {
-	  this.error('Error: Git commit failed');
+	  this.error('Error: Git push failed, you eediot!');
 	  exit(1);
 	}
 	
@@ -47,7 +47,29 @@ cli.deploy = function(type, branch){
 
      	case 'heroku':
 
+			var script = [
+ 				'heroku create',
+ 				'git push heroku master',
+ 				'heroku open'
+ 			];
 
+     		if(exec('git remote').output.indexOf('heroku')){
+
+     			script = [
+	 				'git push heroku master',
+	 				'heroku open'
+	 			];
+     		}
+
+     		_.each(script, function(line){
+
+ 				var outcome = exec(line);
+
+ 				if (outcome.code !== 0) {
+				  this.error(outcome.output);
+				  exit(1);
+				}
+ 			})
 
      		break;
     }
@@ -60,6 +82,8 @@ cli.main(function(args, options) {
     this.debug(options);
 
      var operation = args[0];
+
+     console.log('Aye captain!');
 
      switch(operation){
 
