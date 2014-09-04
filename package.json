@@ -1,6 +1,6 @@
 {
   "name": "stimpy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A sick little monkey for deploying hapi.js apps.",
   "main": "stimpy.js",
   "bin": "stimpy.js",
