@@ -11,10 +11,7 @@ var config = {
 	repo: 'https://github.com/semateos',
 }
 
-cli.parse({
-    test:   ['t', 'test'],
-    port:  ['p', 'port', 'number', 8080]
-});
+cli.parse({});
 
 //create a new starter project based on a repo
 cli.create = function(type, location){
@@ -120,9 +117,6 @@ cli.main(function(args, options) {
      		cli.deploy(args[1], args[2]);
      		break;
      }
-
-    //this.debug('Port: ' + options.test);
-    //this.debug('Port: ' + options.port);
     
 });
 

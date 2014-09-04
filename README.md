@@ -4,7 +4,7 @@ A simple yet inventive fellow for deploying hapi things.
 
 To install:
 ```bash
-$ npm install -g git://github.com/semateos/stimpy.git supervisor bower gulp
+$ npm install -g stimpy supervisor bower gulp
 ```
 (You might need to sudo that depending on your system)
 
@@ -39,6 +39,13 @@ You might want to try the [lite edition](https://github.com/semateos/stimpy-lite
 ```bash
 $ stimpy create lite my-new-app
 ```
+
+##To-do
+- Use Yeoman instead of git
+- Support custom deploy locations
+- Plugins/recipies for popular PaaS' (e.g. nodejitsu)
+- Deploy rollback option
+- Add some stimpy art?
 
 ## Contributers
 
