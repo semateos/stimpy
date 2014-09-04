@@ -2,6 +2,8 @@ Stimpy
 ======
 A simple yet inventive fellow for deploying hapi things.
 
+I made Stimpy because a) I love [hapi.js](http://hapijs.com) and b) because I host a [weekly hack night](http://hackportland.org) where I'm always looking for ways to quickly build and publicly demo little web apps.  I loved the package manager and deploy function in [Meteor](http://meteor.com), but it comes with too much baggage.  So Stimpy gives me just what I want for web inventions: a simple starting place, packages via npm or [bower](http://bower.io), and a one line deploy to a free public demo via [heroku](http://heroku.com).  *All in 5 minutes or less* - or your money back.  I'd love to hear from you if you use Stimpy at your next hackathon - tweet me up at [@semateos](https://twitter.com/semateos)!
+
 To install:
 ```bash
 $ npm install -g stimpy supervisor bower gulp
@@ -15,7 +17,7 @@ $ cd my-new-app
 $ npm start
 ```
 
-This installs and runs a copy of [stimpy-medium](https://github.com/semateos/stimpy-medium). 
+This installs and runs a copy of the [stimpy-medium](https://github.com/semateos/stimpy-medium) boilerplate.
 
 To test deploy:
 ```bash
@@ -41,7 +43,7 @@ $ stimpy create lite my-new-app
 ```
 
 ##To-do
-- Use Yeoman instead of git
+- Use Yeoman instead of git for boilerplates/generators
 - Support custom deploy locations
 - Plugins/recipies for popular PaaS' (e.g. nodejitsu)
 - Deploy rollback option
