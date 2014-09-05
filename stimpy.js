@@ -23,7 +23,6 @@ cli.create = function(type, location){
 
 	}else{
 
-		mkdir('', location);
 		console.log('I am creating for you now: ' + type + ' at: ' + location);
 	}	
 

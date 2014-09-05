@@ -28,11 +28,11 @@ This assumes you have [node](http://nodejs.org/), a [heroku login](https://signu
 
 After you make changes, you'll have to commit them to master before deploying:
 ```bash
-$ git commit -am"made some awesome changes"
+$ git commit -am "made some awesome changes"
 $ stimpy deploy heroku
 ```
 
-You'll probably want to repoint the git origin to something else eventually:
+You'll probably want to point the git origin to something else eventually:
 ```bash
 $ git remote set-url origin git@github.com:semateos/my-app.git
 ```
@@ -43,13 +43,13 @@ $ stimpy create lite my-new-app
 ```
 
 ##To-do
-- Use Yeoman instead of git for boilerplates/generators
+- Use Yeoman instead of git for boilerplates / generators
 - Support custom deploy locations
-- Plugins/recipies for popular PaaS' (e.g. nodejitsu)
+- Plug-ins / recipes for popular PaaS' (e.g. nodejitsu)
 - Deploy rollback option
-- Add some stimpy art?
+- Add some Stimpy art?
 
-## Contributers
+## Contributors
 
 [Sam Mateosian](https://github.com/semateos)
 
