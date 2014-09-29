@@ -13,6 +13,38 @@ var config = {
 
 cli.parse({});
 
+//run a 'script' of console commands:
+var run = function(script, cli){
+
+	//if the script is a string, run it
+	if(typeof script === 'string'){
+
+		console.log(script);
+
+		var outcome = exec(script);
+
+		if (outcome.code !== 0) {
+			cli.error(outcome.output);
+			exit(1);
+		}
+
+	//otherwise if the script is an array, run each line
+	}else if(Array.isArray(script)){
+
+		_.each(script, function(line){
+
+			console.log(line);
+
+			var outcome = exec(line);
+
+			if (outcome.code !== 0) {
+				cli.error(outcome.output);
+				exit(1);
+			}
+		});
+	}
+}
+
 //create a new starter project based on a repo
 cli.create = function(type, location){
 
@@ -50,16 +82,30 @@ cli.create = function(type, location){
 	
 }
 
+//start the local server
+cli.start = function(){
+
+	run('npm start', this);
+}
+
+
 //deploy
 cli.deploy = function(type, branch){
 
+	//default branch to deploy is master
+	if(branch == undefined){
+
+		branch = 'master';
+	}
+
 	switch(type){
 
+		//deploy to heroku
      	case 'heroku':
 
 			var script = [
  				'heroku create',
- 				'git push heroku master',
+ 				'git push heroku ' + branch,
  				'heroku open'
  			];
 
@@ -75,20 +121,34 @@ cli.deploy = function(type, branch){
      		if(has_heroku >= 0){
 
      			script = [
-	 				'git push heroku master',
+	 				'git push heroku ' + branch,
 	 				'heroku open'
 	 			];
      		}
 
-     		_.each(script, function(line){
+     		run(script, this);
 
- 				var outcome = exec(line);
+     		break;
+    }
+}
 
- 				if (outcome.code !== 0) {
-				  this.error(outcome.output);
-				  exit(1);
-				}
- 			})
+//emulate on mobile devices using cordova
+cli.emulate = function(type){
+
+	switch(type){
+
+		//emulate the app on ios sim
+     	case 'ios':
+
+     		run('gulp cordova', this);
+
+			cd('./cordova');
+
+			run('cordova emulate ios', this);
+
+			cd('..');
+
+			run('npm start', this);
 
      		break;
     }
@@ -111,9 +171,19 @@ cli.main(function(args, options) {
      		cli.create(args[1], args[2]);
      		break;
 
+     	case 'start':
+
+     		cli.start();
+     		break;
+
      	case 'deploy':
 
      		cli.deploy(args[1], args[2]);
+     		break;
+
+     	case 'emulate':
+
+     		cli.emulate(args[1]);
      		break;
      }
     
