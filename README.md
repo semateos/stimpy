@@ -14,7 +14,7 @@ To create a starter app:
 ```bash
 $ stimpy create medium my-new-app
 $ cd my-new-app
-$ npm start
+$ stimpy start
 ```
 
 This installs and runs a copy of the [stimpy-medium](https://github.com/semateos/stimpy-medium) boilerplate.
@@ -37,9 +37,20 @@ You'll probably want to point the git origin to something else eventually:
 $ git remote set-url origin git@github.com:semateos/my-app.git
 ```
 
-You might want to try the [lite edition](https://github.com/semateos/stimpy-lite) for even less:
+##Stimpy Flavors
+Stimpy comes in several delicious flavors:
+
+*[Lite](https://github.com/semateos/stimpy-lite)* for even less:
 ```bash
 $ stimpy create lite my-new-app
+```
+*[Medium](https://github.com/semateos/stimpy-medium)* for a little refinement:
+```bash
+$ stimpy create medium my-new-app
+```
+*[Mobile](https://github.com/semateos/stimpy-mobile)* for a mobile / web hybrid crocostimpy:
+```bash
+$ stimpy create mobile my-new-app
 ```
 
 ##To-do
