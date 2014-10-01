@@ -83,9 +83,13 @@ cli.create = function(type, location){
 }
 
 //start the local server
-cli.start = function(){
+cli.start = function(env){
 
-	run('npm start', this);
+	if(!env){
+		env = 'development';
+	}
+
+	run('NODE_ENV=' + env + ' npm start', this);
 }
 
 
