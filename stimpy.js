@@ -144,7 +144,7 @@ cli.emulate = function(type){
 		//emulate the app on ios sim
      	case 'ios':
 
-     		run('gulp cordova', this);
+     		run('NODE_ENV=cordova gulp cordova', this);
 
 			cd('./cordova');
 
