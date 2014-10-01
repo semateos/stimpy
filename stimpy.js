@@ -152,7 +152,7 @@ cli.emulate = function(type){
 
 			cd('..');
 
-			run('npm start', this);
+			//run('NODE_ENV=development npm start', this);
 
      		break;
     }
