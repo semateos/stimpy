@@ -89,7 +89,14 @@ cli.start = function(env){
 		env = 'development';
 	}
 
-	run('NODE_ENV=' + env + ' npm start', this);
+	if(process.platform === 'win32'){
+
+		run('set NODE_ENV=' + env + ' && npm start', this);
+
+	}else{
+
+		run('NODE_ENV=' + env + ' npm start', this);
+	}
 }
 
 
@@ -144,7 +151,16 @@ cli.emulate = function(type){
 		//emulate the app on ios sim
      	case 'ios':
 
-     		run('NODE_ENV=cordova gulp cordova', this);
+     		if(process.platform === 'win32'){
+
+				run('set NODE_ENV=cordova && gulp cordova', this);
+
+			}else{
+
+				run('NODE_ENV=cordova gulp cordova', this);
+			}
+
+     		//run('gulp cordova', this);
 
 			cd('./cordova');
 
