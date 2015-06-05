@@ -50,13 +50,10 @@ cli.create = function(type, location){
 
 	if(!location){
 
-		location = '';
-		console.log('I am creating for you now: ' + type);
+		location = 'stimpy-' + type;
+	}
 
-	}else{
-
-		console.log('I am creating for you now: ' + type + ' at: ' + location);
-	}	
+	console.log('I am creating for you now: ' + type + ' at: ' + location);
 
 	var outcome = exec('git clone ' + config.repo + '/stimpy-' + type + '.git ' + location);
 
@@ -79,7 +76,7 @@ cli.create = function(type, location){
 	}
 
 	cd('..');
-	
+
 }
 
 //start the local server
@@ -176,7 +173,7 @@ cli.emulate = function(type){
 
 //cli starts here
 cli.main(function(args, options) {
-    
+
     this.debug(args);
     this.debug(options);
 
@@ -206,6 +203,5 @@ cli.main(function(args, options) {
      		cli.emulate(args[1]);
      		break;
      }
-    
-});
 
+});
