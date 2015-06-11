@@ -4,9 +4,11 @@ A simple yet inventive fellow for deploying hapi things.
 
 I made Stimpy because a) I love [hapi.js](http://hapijs.com) and b) because I host a [weekly hack night](http://hackportland.org) where I'm always looking for ways to quickly build and publicly demo little web apps.  I loved the package manager and deploy function in [Meteor](http://meteor.com), but it comes with too much baggage.  So Stimpy gives me just what I want for web inventions: a simple starting place, packages via npm or [bower](http://bower.io), and a one line deploy to a free public demo via [heroku](http://heroku.com).  *All in 5 minutes or less* - or your money back.  I'd love to hear from you if you use Stimpy at your next hackathon - tweet me up at [@semateos](https://twitter.com/semateos)!
 
-To install:
+You'll need to have installed [node](http://nodejs.org/), a [heroku login](https://signup.heroku.com/dc) and the [heroku toolbelt](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
+
+To install stimpy:
 ```bash
-$ npm install -g stimpy supervisor bower gulp
+$ npm install -g stimpy bower gulp
 ```
 (You might need to sudo that depending on your system)
 
@@ -24,17 +26,15 @@ To test deploy:
 $ stimpy deploy heroku
 ```
 
-This assumes you have [node](http://nodejs.org/), a [heroku login](https://signup.heroku.com/dc) and the [heroku toolbelt](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
+You'll want to point the git origin to your own repo:
+```bash
+$ git remote set-url origin git@github.com:yourgituser/your-app.git
+```
 
-After you make changes, you'll have to commit them to master before deploying:
+After you make changes, you'll have to commit it to master before deploying:
 ```bash
 $ git commit -am "made some awesome changes"
 $ stimpy deploy heroku
-```
-
-You'll probably want to point the git origin to something else eventually:
-```bash
-$ git remote set-url origin git@github.com:semateos/my-app.git
 ```
 
 ##Stimpy Flavors
