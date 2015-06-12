@@ -83,7 +83,7 @@ cli.create = function(type, location){
 cli.start = function(env){
 
 	if(!env){
-		env = 'dev';
+		env = 'development';
 	}
 
 	if(process.platform === 'win32'){
