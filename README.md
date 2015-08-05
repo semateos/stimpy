@@ -4,7 +4,7 @@ Stimpy
 ======
 A simple yet inventive fellow for making hapi things.
 
-I made Stimpy because a) I love [hapi.js](http://hapijs.com) and b) because I host a [weekly hack night](http://hackportland.org) where I'm always looking for ways to quickly build and publicly demo little web apps.  I loved the package manager and deploy function in [Meteor](http://meteor.com), but it comes with too much baggage.  So Stimpy gives me just what I want for web inventions: a simple starting place, packages via npm or [bower](http://bower.io), and a one line deploy to a free public demo via [heroku](http://heroku.com).  *All in 5 minutes or less* - or your money back.  I'd love to hear from you if you use Stimpy at your next hackathon - tweet me up at [@semateos](https://twitter.com/semateos)!
+Stimpy exists because a) we love [hapi.js](http://hapijs.com) and b) because we host a [weekly hack night](http://hackportland.org) where folks are always looking for ways to quickly build and publicly demo little web apps.  The package manager and deploy function in [Meteor](http://meteor.com) is awesome, but comes with too much baggage.  So Stimpy gives us just what we want for web inventions: a simple starting place, packages via npm or [bower](http://bower.io), and a one line deploy to a free public demo via [heroku](http://heroku.com).  *All in 5 minutes or less* - or your money back.  We'd love to hear from you if you use Stimpy for your next hack - tweet us up at [@bigroomstudios](https://twitter.com/bigroomstudios)!
 
 You'll need to have installed [node](http://nodejs.org/), a [heroku login](https://signup.heroku.com/dc) and the [heroku toolbelt](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
 
@@ -50,24 +50,32 @@ $ stimpy create lite my-new-app
 ```bash
 $ stimpy create medium my-new-app
 ```
+*[API](https://github.com/semateos/stimpy-api)* for the back end only:
+```bash
+$ stimpy create api my-new-app
+```
 *[Mobile](https://github.com/semateos/stimpy-mobile)* for a mobile / web hybrid crocostimpy:
 ```bash
 $ stimpy create mobile my-new-app
 ```
+*[Polymer](https://github.com/semateos/stimpy-polymer)* for hapi / polymer comboface:
+```bash
+$ stimpy create polymer my-new-app
+```
 
-## To-do
+### To-do
 - Use Yeoman instead of git for boilerplates / generators
 - Support custom deploy locations
 - Plug-ins / recipes for popular PaaS' (e.g. nodejitsu)
 - Deploy rollback option
 
-## Contributors
+### Contributors
 
-[Sam Mateosian](https://github.com/semateos)
-[Devin Ivy](https://github.com/devinivy)
-[Max Felker](https://github.com/maxatbrs)
+ - [Sam Mateosian](https://github.com/semateos)
+ - [Devin Ivy](https://github.com/devinivy)
+ - [Max Felker](https://github.com/maxatbrs)
 
-## Art
+### Art
 Trixel Stimpy thanks to [Supernannerpuss](http://trixel.io/#feed:supernannerpuss)
 
 #### License
