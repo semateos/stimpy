@@ -1,6 +1,8 @@
+!["Oh Ren!"](http://cdn.trixel.io/trixels/593.svg =200x)
+
 Stimpy
 ======
-A simple yet inventive fellow for deploying hapi things.
+A simple yet inventive fellow for making hapi things.
 
 I made Stimpy because a) I love [hapi.js](http://hapijs.com) and b) because I host a [weekly hack night](http://hackportland.org) where I'm always looking for ways to quickly build and publicly demo little web apps.  I loved the package manager and deploy function in [Meteor](http://meteor.com), but it comes with too much baggage.  So Stimpy gives me just what I want for web inventions: a simple starting place, packages via npm or [bower](http://bower.io), and a one line deploy to a free public demo via [heroku](http://heroku.com).  *All in 5 minutes or less* - or your money back.  I'd love to hear from you if you use Stimpy at your next hackathon - tweet me up at [@semateos](https://twitter.com/semateos)!
 
@@ -37,7 +39,7 @@ $ git commit -am "made some awesome changes"
 $ stimpy deploy heroku
 ```
 
-##Stimpy Flavors
+## Stimpy Flavors
 Stimpy comes in several delicious flavors:
 
 *[Lite](https://github.com/semateos/stimpy-lite)* for even less:
@@ -53,16 +55,20 @@ $ stimpy create medium my-new-app
 $ stimpy create mobile my-new-app
 ```
 
-##To-do
+## To-do
 - Use Yeoman instead of git for boilerplates / generators
 - Support custom deploy locations
 - Plug-ins / recipes for popular PaaS' (e.g. nodejitsu)
 - Deploy rollback option
-- Add some Stimpy art?
 
 ## Contributors
 
 [Sam Mateosian](https://github.com/semateos)
+[Devin Ivy](https://github.com/devinivy)
+[Max Felker](https://github.com/maxatbrs)
+
+## Art
+Trixel Stimpy thanks to [Supernannerpuss](http://trixel.io/#feed:supernannerpuss)
 
 #### License
 
