@@ -1,4 +1,4 @@
-<img src="http://cdn.trixel.io/trixels/593.svg" alt="Oh Ren!" style="width: 200px;"/>
+<img src="http://cdn.trixel.io/trixels/593.svg" alt="Oh Ren!" width="200" style="width: 200px;"/>
 
 Stimpy
 ======
